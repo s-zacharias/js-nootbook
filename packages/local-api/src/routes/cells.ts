@@ -1,5 +1,5 @@
 import express from 'express';
-import fs from 'fs/promises';
+import { promises as fs } from 'fs';
 import path from 'path';
 
 interface Cell {
@@ -29,9 +29,8 @@ export const createCellsRouter = (filename: string, dir: string) => {
   });
 
   router.post('/cells', async (req, res) => {
-    // serialize them
     const { cells }: { cells: Cell[] } = req.body;
-    // write the cells into the file
+
     await fs.writeFile(fullPath, JSON.stringify(cells), 'utf-8');
     res.send({ status: 'ok' });
   });
