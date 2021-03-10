@@ -1,6 +1,6 @@
 {
   "name": "@js-nootbook/local-api",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "publishConfig": {
     "access": "public"
@@ -23,9 +23,10 @@
     "typescript": "^4.1.5"
   },
   "dependencies": {
+    "@js-nootbook/local-client": "^2.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "http-proxy-middleware": "^1.0.6",
-    "@js-nootbook/local-client": "^0.1.0"
-  }
+    "http-proxy-middleware": "^1.0.6"
+  },
+  "gitHead": "5f5c442bbf953fc21a77550000ff12620260c45c"
 }
